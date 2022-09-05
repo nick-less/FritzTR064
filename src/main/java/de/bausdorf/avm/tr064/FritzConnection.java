@@ -25,21 +25,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpRequest;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
-import org.apache.http.client.AuthCache;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.protocol.HttpClientContext;
-import org.apache.http.impl.auth.DigestScheme;
-import org.apache.http.impl.client.BasicAuthCache;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -98,16 +94,7 @@ public class FritzConnection {
 					+ this.pwd);
 			CredentialsProvider credsProvider = new BasicCredentialsProvider();
 			credsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(user, pwd));
-			AuthCache authCache = new BasicAuthCache();
-			DigestScheme digestScheme = new DigestScheme();
-			digestScheme.overrideParamter("realm", "F!Box SOAP-Auth");
-			digestScheme.overrideParamter("nonce", Long.toString(new Random().nextLong(), 36));
-			digestScheme.overrideParamter("qop", "auth");
-			digestScheme.overrideParamter("nc", "0");
-			digestScheme.overrideParamter("cnonce", DigestScheme.createCnonce());
-			authCache.put(targetHost, digestScheme);
 			context.setCredentialsProvider(credsProvider);
-			context.setAuthCache(authCache);
 			readTR64(scpdUrl);
 		} else {
 			LOG.debug("read igddesc, because credentials are " + this.user + "/" + this.pwd);
