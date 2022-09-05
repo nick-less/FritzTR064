@@ -32,7 +32,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 
 /**
- * <p>Java-Klasse für argumentType complex type.
+ * <p>Java-Klasse fÃ¼r argumentType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 

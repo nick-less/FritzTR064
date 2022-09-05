@@ -37,7 +37,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 
 /**
- * <p>Java-Klasse f�r stateVariableType complex type.
+ * <p>Java-Klasse für stateVariableType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 

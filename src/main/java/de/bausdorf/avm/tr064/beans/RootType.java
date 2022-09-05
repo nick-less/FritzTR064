@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
- * <p>Java-Klasse für rootType complex type.
+ * <p>Java-Klasse fÃ¼r rootType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
