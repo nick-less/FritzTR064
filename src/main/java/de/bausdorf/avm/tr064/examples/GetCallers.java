@@ -60,7 +60,7 @@ public class GetCallers extends Tool {
 		Response response = action.execute();
 		String callListUrl = response.getValueAsString("NewCallListURL");
 
-		System.out.println(callListUrl);
+		LOG.debug("callListUrl: {}", callListUrl);
 		
 		URL url = new URL(callListUrl + "&days=2");
 		char[] buffer = new char[4096];
@@ -72,7 +72,7 @@ public class GetCallers extends Tool {
 						break;
 					}
 					
-					System.out.print(String.valueOf(buffer, 0, direct));
+			    LOG.debug("buffer: {}", String.valueOf(buffer, 0, direct));
 				}
 			}
 		}
