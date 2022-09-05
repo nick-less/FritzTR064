@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.bausdorf.fritz</groupId>
 	<artifactId>fritzapi</artifactId>
-	<version>0.2.0-SNAPSHOT</version>
+	<version>0.3.0-SNAPSHOT</version>
 	<name>fritzapi</name>
 	<description>Access AVM TR-064 API on FRITZ!Box</description>
 
