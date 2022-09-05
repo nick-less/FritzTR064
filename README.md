@@ -39,11 +39,11 @@ Response response = action.execute();
 int deviceCount = response.getValueAsInteger("NewTotalAssociations");
 
 ```
-For more examples see: [The Example Folder](https://github.com/robbyb/FritzTR064/tree/master/examples)
+For more examples see: [The Example Folder](src/main/java/de/bausdorf/avm/tr064/examples)
 
 ## Resorces
 * [AVM API Description](http://avm.de/service/schnittstellen/) (German)
-* [Examples](https://github.com/mirthas/FritzTR064/tree/master/examples)
+* [Examples](src/main/java/de/bausdorf/avm/tr064/examples)
 
 ## Thanks
 
