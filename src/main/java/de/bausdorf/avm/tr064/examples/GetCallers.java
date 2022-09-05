@@ -72,7 +72,7 @@ public class GetCallers extends Tool {
 						break;
 					}
 					
-			    LOG.debug("buffer: {}", String.valueOf(buffer, 0, direct));
+					System.out.print(String.valueOf(buffer, 0, direct));
 				}
 			}
 		}
